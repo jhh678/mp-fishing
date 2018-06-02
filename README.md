@@ -1,2 +1,21 @@
 # mp-fishing
-这个一个小程序，用于学习交流，使用mpvue开发
+
+> This is a Mpvue porject,fishing mini program,just for learning.ging
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
