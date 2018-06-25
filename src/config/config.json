@@ -1,0 +1,11 @@
+{
+  "development": {
+    "apiOrigin": "http://rapapi.org/mockjsdata/31083"
+  },
+  "test": {
+    "apiOrigin": "http://rapapi.org/mockjsdata/31083"
+  },
+  "production": {
+    "apiOrigin": "http://rapapi.org/mockjsdata/31083"
+  }
+}

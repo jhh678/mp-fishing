@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import './http'
 
 Vue.config.productionTip = false
 App.mpType = 'app'
@@ -11,7 +12,13 @@ export default {
   // 这个字段走 app.json
   config: {
     // 页面前带有 ^ 符号的，会被编译成首页，其他页面可以选填，我们会自动把 webpack entry 里面的入口页面加进去
-    pages: ['pages/logs/main', '^pages/index/main'],
+    pages: [
+      '^pages/index/main',
+      'pages/all-goods/main',
+      'pages/group-buying/main',
+      'pages/shoping-cart/main',
+      'pages/user-center/main'
+    ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -22,21 +29,40 @@ export default {
       selectedColor: '#00a53c',
       list: [{
         pagePath: 'pages/index/main',
-        text: '首页'
+        text: '首页',
+        iconPath: '/static/assets/icons/icon-index-default.png',
+        selectedIconPath: '/static/assets/icons/icon-index-selected.png'
       }, {
-        pagePath: 'pages/logs/main',
-        text: '日志'
+        pagePath: 'pages/all-goods/main',
+        text: '所有商品',
+        iconPath: '/static/assets/icons/icon-goods-default.png',
+        selectedIconPath: '/static/assets/icons/icon-goods-selected.png'
+      }, {
+        pagePath: 'pages/group-buying/main',
+        text: '拼团',
+        iconPath: '/static/assets/icons/icon-group-default.png',
+        selectedIconPath: '/static/assets/icons/icon-group-selected.png'
+      }, {
+        pagePath: 'pages/shoping-cart/main',
+        text: '购物车',
+        iconPath: '/static/assets/icons/icon-cart-default.png',
+        selectedIconPath: '/static/assets/icons/icon-cart-selected.png'
+      }, {
+        pagePath: 'pages/user-center/main',
+        text: '我的',
+        iconPath: '/static/assets/icons/icon-user-default.png',
+        selectedIconPath: '/static/assets/icons/icon-user-selected.png'
       }]
     }
   },
   // 只有 app 才会有 onLaunch 的生命周期
-  onLaunch () {
+  onLaunch() {
     // ...
     console.log(1111111)
   },
 
   // 捕获 app error
-  onError (err) {
+  onError(err) {
     console.log(err)
   }
 }
