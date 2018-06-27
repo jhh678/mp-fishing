@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import fly from 'flyio'
-import qs from 'qs'
+// import qs from 'qs'
 import config from '@/config'
-import apiUrls from '@/https/apis'
+import apiUrls from '@/http/apis'
 
 let timerId = {}
 const TIMEOUT = 20000 // 接口20秒超时

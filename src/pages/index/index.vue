@@ -1,32 +1,37 @@
 <template>
   <div class="container">
     <swiper class="swiper" :indicator-dots="true" :autoplay="true" interval="3000" duration="1000">
-      <swiper-item v-for="item of imgUrls" :key="item">
+      <swiper-item v-for="item of data.imgUrls" :key="item">
         <image :src="item" class="slide-image" />
       </swiper-item>
     </swiper>
-    <button class="btn btn-search">
-      <view class="search-icon"></view>搜 索
+    <button class="f-btn btn-search">
+      <div class="search-icon">
+        <f-icon type="sousuo"></f-icon>
+      </div>搜 索
     </button>
+    <div class=""></div>
   </div>
 </template>
 
 <script>
-  import card from '@/components/card'
+  import fIcon from '@/components/f-icon'
 
   export default {
     data() {
       return {
-        imgUrls: [
-          'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-          'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-          'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-        ]
+        data: {
+          imgUrls: [
+            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+          ]
+        }
       }
     },
 
     components: {
-      card
+      fIcon
     },
 
     methods: {},
@@ -37,14 +42,14 @@
   }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
   .swiper {
     height: 360rpx;
-  }
 
-  .swiper .slide-image {
-    width: 100%;
-    height: 360rpx;
+    .slide-image {
+      width: 100%;
+      height: 360rpx;
+    }
   }
 
   .btn-search {
@@ -57,7 +62,6 @@
     display: inline-block;
     margin-right: 10rpx;
     font-size: 32rpx;
-    color: #333;
   }
 
 </style>

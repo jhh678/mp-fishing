@@ -5,24 +5,24 @@
 </template>
 
 <script>
-  import card from '@/components/card'
+  // import card from '@/components/card'
 
   export default {
-    data () {
+    data() {
       return {
 
       }
     },
 
     components: {
-      card
+      // card
     },
 
     methods: {
 
     },
 
-    created () {
+    created() {
 
     }
   }
